@@ -21,7 +21,8 @@ public class UrlController {
     public ResponseEntity<?> shortenUrl(@RequestBody LongUrl longUrl) {
         ShortUrl savedShortenUrl = urlShortner.createShortUrl(longUrl);
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setLocation(URI.create(savedShortenUrl.getId()));
+        var shortenedUrl = URI.create(savedShortenUrl.getId());
+        httpHeaders.setLocation(shortenedUrl);
         return new ResponseEntity<>(httpHeaders, HttpStatus.CREATED);
     }
 

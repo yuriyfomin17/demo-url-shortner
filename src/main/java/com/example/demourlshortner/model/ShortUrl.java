@@ -21,7 +21,7 @@ public class ShortUrl {
     @Id
     private String id;
 
-    @Column(nullable = false, name = "shorten_url", unique = true)
+    @Column(nullable = false, name = "original_url", unique = true)
     private String originalUrl;
 
     @Column(nullable = false, name = "title")
