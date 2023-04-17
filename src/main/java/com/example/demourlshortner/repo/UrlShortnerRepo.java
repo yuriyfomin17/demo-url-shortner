@@ -1,7 +1,7 @@
 package com.example.demourlshortner.repo;
 
 import com.example.demourlshortner.model.ShortUrl;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface UrlShortnerRepo extends JpaRepository<ShortUrl, String> {
+public interface UrlShortnerRepo extends CrudRepository<ShortUrl, String> {
 }
